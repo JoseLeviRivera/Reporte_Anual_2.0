@@ -1,0 +1,76 @@
+:root {
+    --color-primary: #111B54;
+    --color-light: #fff;
+    --color-grey: #efefef;
+    --color-primary:  #01826C;
+    --color-secundary:  #007062;
+}
+
+body {
+    overflow: hidden;
+    font-family: 'Muli', sans-serif;
+    font-weight: 300;
+    color: var(--color-primary);
+}
+
+
+.left{
+    text-align: left;
+}
+
+a {
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: none;
+}
+.bg-primary {
+    background-color: var(--color-primary) !important ;
+}
+a {
+    list-style-type: none;
+} 
+#sidebar-container {
+    min-height: 100vh;
+}
+
+#sidebar-container .logo {
+    padding: .875rem 1.25rem;
+}
+
+#sidebar-container .menu {
+    width: 18rem;
+}
+
+#content {
+    overflow-y: auto;
+    height: 100vh;
+    padding-bottom: 5rem;
+}
+.bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+.custom {
+  background-color: var(--color-primary);
+}
+
+.btn-open-seccion {
+  width: 100%;
+  background-color: var(--color-primary);
+  border-radius: 3px;
+
+}
+
+.btn-outline-secondary:hover {
+  background-color: var(--color-secundary) !important;
+}
