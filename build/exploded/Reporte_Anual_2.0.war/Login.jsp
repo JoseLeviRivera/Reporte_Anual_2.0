@@ -13,7 +13,6 @@
         <title>Login!</title>
 
         <!-- Bootstrap de CSS -->
-        <link rel="stylesheet" type="text/css" href="tools/bootstrap-5.1.3-dist/css/bootstrap.css"/>
         <link rel="stylesheet" type="text/css" href="tools/bootstrap-5.1.3-dist/css/bootstrap.min.css"/>
 
         <!-- Mis estilos -->
@@ -28,10 +27,10 @@
         <link rel="stylesheet" type="text/css" href="tools/fontawesome-free-6.1.1-web/css/all.css">
 
         <!--Poner el logo de la pagina -->
-        <link rel="icon" href="img/logo.png">
+        <link rel="icon" href="./img/logo.png">
 
     </head>
-    <body class="bg-dark">
+    <body class="bg">
         <section>
             <!--g-0 quita el sckroll de abajo-->
             <div class="row g-0">
@@ -58,7 +57,7 @@
 
                     <div class="px-lg-5 py-lg-4 p-4">
                         <img src="img/logo.png" alt="Logotipo" style="width:25%" class="mx-auto d-block">
-                        <h1 class="font-weight-bold mb-4 text-center">¡Bienvenido!</h1>
+                        <h1 class="font-weight-bold mb-4  text-center">¡Bienvenido!</h1>
 
                         <form class="mb-5" action="Controller?action=UsuarioQry" method="post">
                             <div class="mb-3">
@@ -77,7 +76,11 @@
 
                             <div class="mb-3">
                                 <!--w-100 es para que se vea mas ancho el boton de iniciar sesion -->
+<<<<<<< HEAD
                                 <button type="submit" class="btn btn-primary w-100">Iniciar Sesión</button>
+=======
+                                <button type="submit" class="btn btn-primary w-100"><a href="index.jsp" style="text-decoration: none; color: white">Iniciar Sesión</a></button>
+>>>>>>> 16e72ec2869ca2fa5c440ba3c1583746df6c5684
                             </div>
                             <!--
                                     text-muted: color gris.
