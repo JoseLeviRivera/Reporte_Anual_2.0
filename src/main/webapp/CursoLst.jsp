@@ -19,6 +19,59 @@
         <link rel="icon" href="img/logo.png">
     </head>
     <body>
+        <!-- Barra de navegación! -->
+        <nav class="navbar navbar-expand-lg custom navbar-light">
+            <div class="container-fluid">
+                <a class="navbar-brand text-light" href="index.jsp">UNPA</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-light" href="" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Docencia
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a class="dropdown-item" href="CursoLst.jsp">Cursos impartidos</a></li>
+                                <li><a class="dropdown-item" href="ProductoLst.jsp">Productos</a></li>
+                                <li><a class="dropdown-item" href="AsignaturaLst.jsp">Asignaturas con mayor afinidad</a></li>
+                            </ul>
+                        </li> 
+                        <!-- Formación de recursos humanos -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Formación de recursos humanos
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a class="dropdown-item" href="#">Tutorías</a></li>
+                                <li><a class="dropdown-item" href="#">Dirección de tesis</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Investigación y/o promoción al desarrollo
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#">Proyectos de investigación</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="#">Publicación de articulos</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="#">Promoción al desarrollo</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active text-light" href="#">Gestión académica</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active text-light" href="#">Difusión</a>
+                        </li>
+                    </ul>
+                    <label class="d-flex nav-link disabled text-light">M.C. Ariel López Rodríguez</label>
+                </div>
+            </div>
+        </nav>
+        <!-- Final barra de navegación! -->
         <!-- tabla -->
         <div class="container">                                                                                      
             <div class="table-responsive">          
@@ -68,7 +121,7 @@
 
         <!-- Modal de registrar -->
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
+            <div class="modal-dialog modal-lg">
                 <div class="modal-content">
                     <div class="modal-header">
                         <h5 class="modal-title" id="exampleModalLabel">Cursos impartidos</h5>
@@ -117,6 +170,6 @@
                 </div>
             </div>
         </div>
-        <script src="tools/bootstrap-5.1.3-dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        <script src="./tools/bootstrap-5.1.3-dist/js/bootstrap.bundle.min.js"></script
     </body>
 </html>

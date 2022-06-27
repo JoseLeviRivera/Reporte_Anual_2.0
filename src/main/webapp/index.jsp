@@ -31,7 +31,7 @@
         <header>
             <nav class="navbar navbar-expand-lg custom navbar-light">
                 <div class="container-fluid">
-                    <a class="navbar-brand text-light" href="contenido.html">UNPA</a>
+                    <a class="navbar-brand text-light" href="index.jsp">UNPA</a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -166,7 +166,6 @@
             </div>
         </main>
 
-        <script src="tools/bootstrap-5.1.3-dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
         <script src="./tools/bootstrap-5.1.3-dist/js/bootstrap.bundle.min.js"></script>
     </body>

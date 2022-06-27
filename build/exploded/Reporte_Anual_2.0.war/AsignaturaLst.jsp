@@ -7,22 +7,22 @@
         <title>Asignaturas con mayor afinidad curricular</title>
 
         <!-- CSS -->
-        <link rel="stylesheet" type="text/css" href="assets/css/estilos.css">
+        <link rel="stylesheet" type="text/css" href="css/estilos.css">
 
         <!-- Bootstrap -->
         <link rel="stylesheet" type="text/css" href="./tools/bootstrap-5.1.3-dist/css/bootstrap.css">
         <link rel="stylesheet" type="text/css" href="./tools/bootstrap-5.1.3-dist/css/bootstrap.min.css">
 
         <!--Poner logo de google Fontawesome -->
-        <link rel="stylesheet" type="text/css" href="tools/fontawesome-free-6.1.1-web/css/all.css">
+        <link rel="stylesheet" type="text/css" href="./tools/fontawesome-free-6.1.1-web/css/all.css">
 
         <!--Poner el logo de la pagina -->
-        <link rel="icon" href="img/logo.png">
+        <link rel="icon" href="./img/logo.png">
     </head>
     <body>
         <nav class="navbar navbar-expand-lg custom navbar-light">
             <div class="container-fluid">
-                <a class="navbar-brand text-light" href="contenido.html">UNPA</a>
+                <a class="navbar-brand text-light" href="index.jsp">UNPA</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -115,7 +115,7 @@
 
         <!-- Modal -->
         <div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
+            <div class="modal-dialog modal-lg">
                 <div class="modal-content">
                     <div class="modal-header text-center">
                         <h5 class="modal-title" id="exampleModalLabel">Agregar asignatura</h5>
