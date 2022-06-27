@@ -63,8 +63,15 @@ BEGIN
 	SELECT 1;
 END//
 DELIMITER ;
-
-
 CALL tbl_usuario_eliminar(3);
 
+-- Tabla reporte
+CREATE TABLE IF NOT EXISTS tbl_reporte(
+	id_reporte INT(11) NOT NULL,
+    id_usuario INT(11) NOT NULL, 
+    cicloEscolar VARCHAR(20) NOT NULL,
+    fechaDeEntrega DATE NOT NULL,
+    PRIMARY KEY (id_reporte),
+    FOREIGN KEY(id_usuario) REFERENCES tbl_usuario(id_usuario) 
+);
 
