@@ -1,86 +1,50 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Control;
-
+import Patter.Action;
+import Util.DbUtil;
+import Util.ReqUtil;
 import java.io.IOException;
-import java.io.PrintWriter;
+import java.sql.Connection;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-/**
- *
- * @author Jose Levi
- */
 public class Controller extends HttpServlet {
-
-    /**
-     * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
-     * methods.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
-    protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
-        try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet Controller</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet Controller at " + request.getContextPath() + "</h1>");
-            out.println("</body>");
-            out.println("</html>");
+    private Connection dbCon;
+    public void init() {
+        try {
+            dbCon = DbUtil.getInstance().getConnection();
+        } catch (Exception e) {
+            System.out.println("A problem occurred while connecting to the database.");
+            System.out.println(e.toString());
         }
     }
 
-    // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
-    /**
-     * Handles the HTTP <code>GET</code> method.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
-    @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        processRequest(request, response);
+    public void doGet(HttpServletRequest _req, HttpServletResponse _res) throws ServletException, IOException {
+        doPost(_req, _res);
     }
 
-    /**
-     * Handles the HTTP <code>POST</code> method.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
-    @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        processRequest(request, response);
+    public void doPost(HttpServletRequest _req, HttpServletResponse _res) throws ServletException, IOException {
+        ReqUtil reqUtil = new ReqUtil(_req);
+        Action action = (Action) reqUtil.getAction();
+        init();
+        action.setDatabase(dbCon);
+        if (action.execute(_req, _res)) {
+            String view = action.getView();
+            _req.setAttribute("model", action.getModel());
+            RequestDispatcher dispatcher = _req.getRequestDispatcher(view);
+            dispatcher.forward(_req, _res);
+        }
     }
 
-    /**
-     * Returns a short description of the servlet.
-     *
-     * @return a String containing servlet description
-     */
-    @Override
-    public String getServletInfo() {
-        return "Short description";
-    }// </editor-fold>
+    public void destroy() {
+        try {
+            dbCon.close();
+        } catch (java.sql.SQLException e) {
+            System.out.println("A problem occurred while closing the database.");
+            System.out.println(e.toString());
+        }
+    }
 
 }

@@ -60,10 +60,10 @@
                         <img src="img/logo.png" alt="Logotipo" style="width:25%" class="mx-auto d-block">
                         <h1 class="font-weight-bold mb-4 text-center">¡Bienvenido!</h1>
 
-                        <form class="mb-5">
+                        <form class="mb-5" action="Controller?action=UsuarioQry" method="post">
                             <div class="mb-3">
                                 <label for="exampleInputEmail1" class="form-label font-weight-bold">Email</label>
-                                <input type="email" class="form-control bg-dark-x border-0" placeholder="Ingresa tu email" id="exampleInputEmail" name="" arial-describedby="emailHelp">
+                                <input type="email" class="form-control bg-dark-x border-0" placeholder="Ingresa tu email" id="exampleInputEmail" name="mail" arial-describedby="emailHelp">
                                 <!--
                                 <div id="emailHelp" class="form-text">We 'll never share your email with anyone else</div>
                                 -->
@@ -71,13 +71,13 @@
 
                             <div class="mb-3">
                                 <label for="exampleInputPassword1" class="form-label font-weight-bold">Contraseña</label>
-                                <input type="password" class="form-control bg-dark-x border-0 mb-2" placeholder="Ingresa tu Contraseña" id="exampleInputPassword1" name="" arial-describedby="emailHelp">
+                                <input type="password" class="form-control bg-dark-x border-0 mb-2" placeholder="Ingresa tu Contraseña" id="exampleInputPassword1" name="password" arial-describedby="emailHelp">
                                 <a href="#" id="emailHelp" class="form-text text-muted text-decoration-none">¿Has olvidado tu contraseña?</a>
                             </div>
 
                             <div class="mb-3">
                                 <!--w-100 es para que se vea mas ancho el boton de iniciar sesion -->
-                                <button type="submit" class="btn btn-primary w-100"><a href="index.html" style="text-decoration: none; color: white">Iniciar Sesión</a></button>
+                                <button type="submit" class="btn btn-primary w-100">Iniciar Sesión</button>
                             </div>
                             <!--
                                     text-muted: color gris.
