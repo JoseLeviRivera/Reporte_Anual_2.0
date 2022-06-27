@@ -61,7 +61,7 @@ public class UsuarioQryAction extends ActionAbstract implements Action {
 
     @Override
     public boolean execute(HttpServletRequest _req, HttpServletResponse _res) throws ServletException, IOException {
-        view = "Logeado.jsp";
+        view = "Principal.jsp";
         return processData(_req);
     }
 
